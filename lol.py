@@ -64,9 +64,7 @@ class Lol:
         print('所有皮肤数据下载完成')
 
     def down_hero_skin(self, name, url, path):
-        if os.path.exists(path) is True:
-            pass
-        else:
+        if os.path.exists(path) is False:
             os.makedirs(path)
         skin_content = requests.get(url).content
         name = name.replace('/', '／')
